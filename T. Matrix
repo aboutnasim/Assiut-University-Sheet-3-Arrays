@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i,j;
+    int a[123][123];
+    scanf("%d",&n);
+
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    int primarydiogonal=0;
+    int seconderydiogonal=0;
+
+
+    for(i=1; i<=n; i++)
+    {
+        primarydiogonal += a[i][i];
+    }
+    for(i=1, j=n; i<=n; i++, j--)
+    {
+        seconderydiogonal+= a[i][j];
+    }
+
+
+    int diff = primarydiogonal - seconderydiogonal;
+    if(diff<0) diff*=(-1);
+
+    printf("%d\n",diff);
+}
