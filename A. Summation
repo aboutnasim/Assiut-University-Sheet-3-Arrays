@@ -1,0 +1,21 @@
+#include<stdio.h>
+int a[10000000];
+int main()
+{
+    int n;
+    long long sum=0;
+
+    scanf("%d",&n);
+
+    for(int i=1; i<=n; i++)
+    {
+        scanf("%d",&a[i]);
+        sum+=a[i];
+    }
+    if(sum<0)
+    {
+        sum = sum*(-1);
+    }
+
+    printf("%lld\n",sum);
+}
