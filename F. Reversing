@@ -1,0 +1,25 @@
+#include<stdio.h>
+int a[10000000];
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1; i<=n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    int j;
+    for(int i=1, j=n; i<j; i++, j--)
+    {
+        int temp=a[i];
+        a[i]= a[j];
+        a[j]=temp;
+    }
+
+    for(int i=1; i<=n; i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
