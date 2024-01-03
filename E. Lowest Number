@@ -1,0 +1,25 @@
+#include<stdio.h>
+int a[1000000];
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1; i<=n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    int index=1;
+    int minimum=a[1];
+
+    for(int i=1; i<=n; i++)
+    {
+        if(mnimum>a[i])
+        {
+            minimum= a[i];
+            index = i;
+        }
+    }
+    printf("%d %d\n",minimum, index);
+}
