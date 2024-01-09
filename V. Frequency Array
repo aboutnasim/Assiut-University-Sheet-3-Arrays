@@ -1,0 +1,21 @@
+#include<stdio.h>
+const int mx=1e5+1;
+int a[mx];
+int cnt[mx];
+int main()
+{
+    int n,m;
+
+    scanf("%d %d",&n,&m);
+
+    for(int i=1; i<=n; i++)
+    {
+        scanf("%d",&a[i]);
+        cnt[a[i]]++;
+    }
+
+    for(int i=1; i<=m; i++)
+    {
+        printf("%d\n",cnt[i]);
+    }
+}
